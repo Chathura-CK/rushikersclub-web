@@ -1,0 +1,132 @@
+
+.login-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: url('C:\Github\hikersclub-web\frontend\src\assets\landing_background.jpg') no-repeat;
+   
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Shift content left */
+    overflow: hidden;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: flex-start; /* Left alignment */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 65%;
+  
+  }
+  
+  .form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #4a4a4a;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+  
+  .input-group .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.8rem;
+  }
+  
+  .input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 1rem;
+  }
+  
+  .input-group input::placeholder {
+    color: #888;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(45deg, #2e94ba,#61cccb); /* Gradient for modern look */
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    color: white;
+    background: linear-gradient(45deg, #185a7f, #2e94ba);
+  }
+  
+  .alert {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .alert.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .redirect-text {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .error-alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+  
+  .redirect-text a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .redirect-text a:hover {
+    text-decoration: underline;
+  }
+  
