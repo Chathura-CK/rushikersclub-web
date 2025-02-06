@@ -16,6 +16,10 @@ const errorMiddleware = require('./middlewares/errors');
 app.use(express.json());
 app.use(cookieParser());
 
+app.get('/hello', (req, res) => {
+    res.send('Hello from express');
+});
+
 
 // import routes
 const auth = require('./routes/auth');
