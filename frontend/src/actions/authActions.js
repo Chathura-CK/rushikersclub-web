@@ -12,7 +12,7 @@ export const register = (userData) => async (dispatch) => {
     try {
         dispatch({ type: REGISTER_USER_REQUEST });
 
-        const { data } = await axios.post('https://rushikersclub-web-git-gh-pages-chathura-chandrasiris-projects.vercel.app/api/v1/register', userData, {
+        const { data } = await axios.post('https://rushikersclub-web.vercel.app/api/v1/register', userData, {
             headers: { 'Content-Type': 'application/json' }
         });
 
@@ -31,7 +31,7 @@ export const login = (email, password) => async (dispatch) => {
     try {
         dispatch({ type: LOGIN_REQUEST });
 
-        const { data } = await axios.post('https://rushikersclub-web-git-gh-pages-chathura-chandrasiris-projects.vercel.app/api/v1/login', 
+        const { data } = await axios.post('https://rushikersclub-web.vercel.app/api/v1/login', 
             { email, password }, 
             { headers: { 'Content-Type': 'application/json' }, withCredentials: true }
         );
@@ -58,7 +58,7 @@ export const loadUser = () => async (dispatch) => {
         const token = localStorage.getItem('token');
         if (!token) throw new Error("No token found, please log in.");
 
-        const { data } = await axios.get('https://rushikersclub-web-git-gh-pages-chathura-chandrasiris-projects.vercel.app/api/v1/me', {
+        const { data } = await axios.get('https://rushikersclub-web.vercel.app/api/v1/me', {
             headers: { Authorization: `Bearer ${token}` },
             withCredentials: true
         });
@@ -76,7 +76,7 @@ export const loadUser = () => async (dispatch) => {
 // Logout user
 export const logout = () => async (dispatch) => {
     try {
-        await axios.get('https://rushikersclub-web-git-gh-pages-chathura-chandrasiris-projects.vercel.app/api/v1/logout', { withCredentials: true });
+        await axios.get('https://rushikersclub-web.vercel.app/api/v1/logout', { withCredentials: true });
         localStorage.removeItem('token');
         dispatch({ type: LOGOUT_SUCCESS });
     } catch (error) {
