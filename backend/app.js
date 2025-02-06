@@ -8,6 +8,8 @@ const cors = require('cors');
 app.use(cors({
     origin: 'https://rushikersclub.me', // Allow requests from your frontend
     credentials: true, // Include cookies in requests
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization"
   }));
 
 const cookieParser  = require('cookie-parser');
