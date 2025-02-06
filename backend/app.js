@@ -18,7 +18,7 @@ const errorMiddleware = require('./middlewares/errors');
 app.use(express.json());
 app.use(cookieParser());
 
-app.get('/hello', (req, res) => {
+app.get('/api/hello', (req, res) => {
     res.send('Hello from express');
 });
 
