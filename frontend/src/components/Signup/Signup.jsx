@@ -19,7 +19,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:4000/api/v1/register', formData);
+      await axios.post('https://backend-amber-one-56.vercel.app/api/v1/register', formData);
       setLoading(false);
 
       // Display success message and navigate to homepage
