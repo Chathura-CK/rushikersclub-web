@@ -13,7 +13,7 @@ const EMagazine = ({ theme }) => {
 
   useEffect(() => {
     const fetchApprovedPosts = async () => {
-      const response = await axios.get('https://backend-amber-one-56.vercel.app/api/v1/magazine/approved');
+      const response = await axios.get('https://backend-4i57smi4t-chathura-chandrasiris-projects.vercel.app/api/v1/magazine/approved');
       setMagazineData(response.data);
     };
     fetchApprovedPosts();
