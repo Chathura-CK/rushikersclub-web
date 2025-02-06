@@ -13,7 +13,7 @@ const EMagazine = ({ theme }) => {
 
   useEffect(() => {
     const fetchApprovedPosts = async () => {
-      const response = await axios.get('https://rushikersclub-web.vercel.app/api/v1/magazine/approved');
+      const response = await axios.get('https://rushikersclub-web-git-gh-pages-chathura-chandrasiris-projects.vercel.app/api/v1/magazine/approved');
       setMagazineData(response.data);
     };
     fetchApprovedPosts();
