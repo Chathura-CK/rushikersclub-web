@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './submitPost.css'; // Import the CSS file
 
-const SubmitPostForm = ({ onSubmit }) => {
+const SubmitPost = ({ onSubmit }) => {
   const [title, setTitle] = useState('');
   const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
@@ -40,4 +40,4 @@ const SubmitPostForm = ({ onSubmit }) => {
   );
 };
 
-export default SubmitPostForm;
+export default SubmitPost;
