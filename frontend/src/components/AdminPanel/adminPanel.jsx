@@ -34,7 +34,7 @@ const AdminPanel = () => {
 
         console.log('Token:', token); // Log the token for debugging
 
-        const response = await axios.get('https://rushikersclub-web.vercel.app/api/v1/magazine/pending', {
+        const response = await axios.get('https://backend-chathura-chandrasiris-projects.vercel.app/api/v1/magazine/pending', {
           headers: {
             Authorization: `Bearer ${token}`, // Include the token in the request headers
           },
@@ -64,7 +64,7 @@ const AdminPanel = () => {
         throw new Error('No token found');
       }
 
-      await axios.put(`https://rushikersclub-web.vercel.app/api/v1/magazine/approve/${id}`, {}, {
+      await axios.put(`https://backend-chathura-chandrasiris-projects.vercel.app/api/v1/magazine/approve/${id}`, {}, {
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the request headers
         },

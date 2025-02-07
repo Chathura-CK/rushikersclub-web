@@ -19,7 +19,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      await axios.post('https://rushikersclub-web.vercel.app/api/v1/register', formData);
+      await axios.post('https://backend-chathura-chandrasiris-projects.vercel.app/api/v1/register', formData);
       setLoading(false);
 
       // Display success message and navigate to homepage

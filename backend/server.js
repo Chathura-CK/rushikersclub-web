@@ -15,9 +15,7 @@ process.on('uncaughtException',err =>{
 })
 
 
-dotenv.config({path:'backend/config/config.env'})
-
-
+dotenv.config({ path: __dirname + '/config/config.env' });
 
 connectDatabase();
 
@@ -25,7 +23,6 @@ connectDatabase();
 //     console.log(`Server started on PORT: ${process.env.Port} in ${process.env.NODE_ENV} mode.`);
 // })
 
-module.exports = app; // Exporting app instead of running a server
 
 
 // handle unhandled promise rejection
@@ -38,5 +35,6 @@ process.on('unhandledRejection',err =>{
     
 });
 
+module.exports = app; // Exporting app instead of running a server
 
 
