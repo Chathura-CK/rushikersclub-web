@@ -60,7 +60,7 @@ const Footer = ({ theme }) => {
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p><a href='/events' className='text-reset'>Events</a></p>
               <p><a href='/about' className='text-reset'>About</a></p>
-              <p><a href='/submitPost' className='text-reset'>Submit a Post for E-Magazine</a></p>
+              <p><a href='/submitpost' className='text-reset'>Submit a Post for E-Magazine</a></p>
               <p><a href='#!' className='text-reset'>Help</a></p>
             </MDBCol>
 
