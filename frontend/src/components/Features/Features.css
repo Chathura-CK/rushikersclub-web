@@ -19,27 +19,161 @@
     font-size: 32px;
 }
 
-.feature-list {
+/* Wrapper Style */
+.wrapper.style1 {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.wrapper.style1.light {
+    background-color: #f9f9f9; /* Light background */
+    color: #333;              /* Dark text for readability */
+}
+
+.wrapper.style1.dark {
+    background-color: #333;   /* Dark background */
+    color: #f9f9f9;           /* Light text for readability */
+}
+
+.wrapper.style2 {
+    background-color: #185a7f;
+    color: #f9f9f9;
+    /* border-radius: 1000px; */
+    background-position: top left;
+    background-size: 100% 6em;
+    background-repeat: no-repeat;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Row Styling */
+.row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
-    justify-content: center;
 }
 
-.feature-item {
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+/* Column Styling */
+.col-4 {
+    flex: 1;
+    min-width: 280px;
+    max-width: 32%;
+}
+
+/* Box Highlight */
+.box.highlight {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box.highlight.light {
+    background-color: #f9f9f9; /* Light background */ 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box.highlight.dark {
+    background-color: #333;   /* Dark background */ 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-item.light {
-    background: #ffffff; /* White background for light mode */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+.box.highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.feature-item.dark {
-    background: #444444; /* Darker background for dark mode */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
+/* Icons */
+.box.highlight i {
+    font-size: 3rem;
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+/* Heading */
+.box.highlight h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.box.highlight.light h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.box.highlight.dark h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f9f9f9;
+}
+
+/* Paragraph */
+.box.highlight p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+.box.highlight.light p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+.box.highlight.dark p {
+    font-size: 1rem;
+    color: #f9f9f9;
+    line-height: 1.6;
+}
+
+.header p {
+    color: #999;
+    font-size: 1.25em;
+    position: relative;
+    margin-top: -1.25em;
+    margin-bottom: 2.25em;
+}
+
+.header.major {
+    text-align: center;
+    margin: 0 0 2em 0;
+}
+
+    header.major h2 {
+        font-size: 2.25em;
+    }
+
+    header.major p {
+        position: relative;
+        border-top: solid 1px #e0e0e0;
+        padding: 1em 0 0 0;
+        margin: 0;
+        top: -1em;
+        font-size: 1.5em;
+        letter-spacing: -0.025em;
+    }
+
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-4 {
+        max-width: 100%;
+    }
 }

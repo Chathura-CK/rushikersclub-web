@@ -5,11 +5,19 @@ import './Hero.css';
 const Hero = ({ theme }) => {
     
    return (
-        <section className={`hero ${theme}`}>
-            <h1>Discover Your Next Adventure</h1>
-            <p>Join our community of tourists, guides, and event managers for unforgettable experiences.</p>
-            <button className="buttn">Get Started</button>
+    <div className={`hero ${theme}`} id="page-wrapper">
+       
+        {/* Banner */}
+        <section id="banner">
+            <header>
+                <h2>Welcome to RUS Hiker's Club!</h2>
+                <a href="/about" className="button">Learn More</a>
+            </header>
         </section>
+
+      
+    </div>
+        
     );
 };
 

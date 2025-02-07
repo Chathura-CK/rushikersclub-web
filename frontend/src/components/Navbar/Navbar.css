@@ -1,9 +1,13 @@
 .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #fff;
+    z-index: 800;
     transition: 0.5s;
 }
 .logo{
@@ -99,8 +103,7 @@ ul li a {
   background: linear-gradient(45deg, #185a7f, #2e94ba); /* Slightly darker gradient on hover */
 }
 
-
- .offcanvas {
+.offcanvas {
   text-align: center;
   margin-bottom: 20px;
   text-size-adjust: bold;
