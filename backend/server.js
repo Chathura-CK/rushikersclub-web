@@ -21,11 +21,14 @@ dotenv.config({path:'backend/config/config.env'})
 
 connectDatabase();
 
-const server = app.listen(process.env.Port, ()=>{
-    console.log(`Server started on PORT: ${process.env.Port} in ${process.env.NODE_ENV} mode.`);
-})
+// const server = app.listen(process.env.Port, ()=>{
+//     console.log(`Server started on PORT: ${process.env.Port} in ${process.env.NODE_ENV} mode.`);
+// })
 
-// handle unhandle promise rejection
+module.exports = app; // Exporting app instead of running a server
+
+
+// handle unhandled promise rejection
 process.on('unhandledRejection',err =>{
     console.log(`ERROR: ${err.stack}`);
     console.log('Shutting down the server due to unhandled promise rejection');
@@ -33,5 +36,7 @@ process.on('unhandledRejection',err =>{
         process.exit(1);
     });
     
-})
+});
+
+
 
