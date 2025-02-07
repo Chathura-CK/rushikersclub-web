@@ -3,7 +3,6 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 import { Link } from 'react-router-dom';
 import logo_light from '../../assets/logo.png';
 import logo_dark from '../../assets/logo.png';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = ({ theme }) => {
@@ -59,10 +58,10 @@ const Footer = ({ theme }) => {
 
             <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
-              <p><a href='/events' className='text-reset'>Events</a></p>
-              <p><a href='/about' className='text-reset'>About</a></p>
-              <p><a className='text-reset'><Route path="/submitpost" />Submit a Post for E-Magazine</a></p>
-              <p><a href='#!' className='text-reset'>Help</a></p>
+              <p><Link to='/events' className='text-reset'>Events</Link></p>
+              <p><Link to='/about' className='text-reset'>About</Link></p>
+              <p><Link to='/submitpost' className='text-reset'>Submit a Post for E-Magazine</Link></p>
+              <p><Link to='#!' className='text-reset'>Help</Link></p>
             </MDBCol>
 
             <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
