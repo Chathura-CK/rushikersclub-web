@@ -10,7 +10,7 @@ import LandingPage from './pages/LandingPage';
 import Profile from './pages/Profile';
 import About from './pages/About';
 import Footer from './components/Footer/Footer';
-import SubmitPost from './components/SubmitPost/submitPost';
+import SubmitPost from './pages/SubmitPost';
 import store from './store';
 import { loadUser } from './actions/authActions';
 import  ProtectedRoute  from './route/ProtectedRoute';
