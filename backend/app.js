@@ -34,7 +34,9 @@ app.use('/api/v1/events', events);
 app.use('/api/v1/admin', admin);
 app.use('/api/v1/magazine', magazine);
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
 });
@@ -43,4 +45,4 @@ app.get('*', (req, res) => {
 app.use(errorMiddleware);
 
 
-module.exports = app
+module.exports = app;
