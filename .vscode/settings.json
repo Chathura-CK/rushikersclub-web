@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "undefined/subscriptions/f0e2d611-a344-499a-923c-98f0233fde23/resourceGroups/rushikersclub-rg/providers/Microsoft.Web/sites/rushikersclub",
-    "appService.deploySubpath": "."
-}
