@@ -10,7 +10,7 @@ const SubmitPost = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = { title, image, description };
-    await axios.post('https://backend-chathura-chandrasiris-projects.vercel.app/api/v1/magazine/submit', newPost);
+    await axios.post('https://rushikersclub-backend.azurewebsites.net/api/v1/magazine/submit', newPost);
     onSubmit();
   };
 

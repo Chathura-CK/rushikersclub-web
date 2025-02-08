@@ -6,7 +6,7 @@ const cors = require('cors');
 
 // Middleware
 app.use(cors({
-    origin: 'https://rushikersclub.me', // Allow requests from your frontend
+    origin: 'https://rushikersclub-frontend.azurewebsites.net', // Allow requests from your frontend
     credentials: true, // Include cookies in requests
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization"
@@ -33,6 +33,11 @@ app.use('/api/v1', auth);
 app.use('/api/v1/events', events);
 app.use('/api/v1/admin', admin);
 app.use('/api/v1/magazine', magazine);
+
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+});
 
 
 app.use(errorMiddleware);
