@@ -10,6 +10,7 @@ const AdminLayout = () => {
           <ul>
             <li><Link to="/admin/dashboard">Dashboard</Link></li>
             <li><Link to="/admin/users">Users</Link></li>
+            <li><Link to="/admin/eventdashboard">Events</Link></li>
           </ul>
         </nav>
       </aside>

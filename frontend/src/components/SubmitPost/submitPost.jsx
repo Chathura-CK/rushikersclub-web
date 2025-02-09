@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './submitPost.css'; // Import the CSS file
 
@@ -7,11 +7,22 @@ const SubmitPost = ({ onSubmit }) => {
   const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = { title, image, description };
-    await axios.post('https://rushikersclub-backend.azurewebsites.net/api/v1/magazine/submit', newPost);
+    try{
+      await axios.post('https://rushikersclub-backend.azurewebsites.net/api/v1/magazine/submit', newPost);
+    alert('Post submitted successfully');
     onSubmit();
+    } catch (error) {
+      console.error('Error submitting post:', error);
+      alert('Failed to submit post. Please try again.');
+    }
+    
   };
 
   return (

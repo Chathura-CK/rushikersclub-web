@@ -17,6 +17,7 @@ import  ProtectedRoute  from './route/ProtectedRoute';
 import AdminLayout from './layout/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import UserManagement from './pages/admin/UserManagement';
+import EventDashboard from './pages/admin/EventDashboard';
 
 const App = () => {
   const current_theme = localStorage.getItem('current_theme');
@@ -43,6 +44,7 @@ const App = () => {
             <Route path="/admin" element={<AdminLayout />}>
               <Route path="dashboard" element={<AdminDashboard />} />
               <Route path="users" element={<UserManagement />} />
+              <Route path="eventdashboard" element={<EventDashboard/>} />
             </Route>
             <Route path="/" element={<LandingPage theme={theme} />} />
             <Route path="/events" element={<Events theme={theme} />} />
